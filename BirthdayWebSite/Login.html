@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Notification App </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <meta name="keywords" content="Ribbon Login Form Responsive Templates, Iphone Compatible Templates, Smartphone Compatible Templates, Ipad Compatible Templates, Flat Responsive Templates" />
+    <link href="Content/styleLogin.css" rel='stylesheet' type='text/css' />
+    <!--webfonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <!--/webfonts-->
+
+    <script src='Scripts/jquery.min.js'></script>
+    <script src="Scripts/knockout-3.4.2.js"></script>
+    <script src="Scripts/SiteScripts/Login.js"></script>
+</head>
+<body style="background-image: url('Images/happy-birthday-picture-full-hd-wallpaper-1.jpg'); ">
+    <!--start-main-->
+
+    <h1><img src="Images/logo.png" height:160px; width:100px" /><br />Birthday!<span>Notification App...</span></h1>
+    <div class="login-box">
+        <form id="login">
+            <input type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" data-bind="value: UserID" placeholder="User Code">
+            <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" data-bind="value: Password" placeholder="Password">
+
+            <!--<div class="remember">
+                <a href="#"><p>Remember me</p></a>
+                <h4>Forgot your password?<a href="#">Click here.</a></h4>
+            </div>-->
+            <div class="clear"> </div>
+            <div class="btn">
+                <input type="submit" value="LOG IN" data-bind="click: Login">
+            </div>
+            <div class="clear"> </div>
+        </form>
+    </div>
+    <!--//End-login-form-->
+    <!--start-copyright-->
+    <!--<div class="copy-right">
+        <p><a href="http://www.faurecia.com/en">© 2017 Faurecia. All Rights Reserved.</a></p>
+    </div>-->
+    <!--//end-copyright-->
+</body>
+</html>

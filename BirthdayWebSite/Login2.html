@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="Content/styleLogin.css">
+   
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="Scripts/knockout-3.4.2.js"></script>
+    <script src="Scripts/SiteScripts/Login.js"></script>
+    <style>
+        body {
+    background-image: url("Images/bck2.png");
+    background-repeat:  repeat-x repeat-y;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="info">
+            <img src="Images\logo.png" height:150px; width:200px />
+        </div>
+    </div>
+    <div class="form">
+        <div class="info">
+            <img height:"150px" src="Images/1.jpg" />
+        </div>
+        <div>
+            <h1 class="fa" style="font-family:'Century Gothic';font-size:xx-large;color:#0A3E7A;font-weight:bold">Birthday Notification App</h1>
+            <br /><br />
+        </div>
+        <form class="login-form">
+            <input type="text" placeholder="User Code" required="required" data-bind="value: UserID" />
+            <input type="password" placeholder="Password" required="required" data-bind="value: Password"  />
+            <button data-bind="click: Login" type="submit">Login</button>
+
+        </form>
+    </div>
+    
+    <script type="text/javascript">
+        $('.message a').click(function () {
+            $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+        });
+    </script>
+</body>
+</html>

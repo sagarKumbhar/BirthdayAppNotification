@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<script runat="server">
+
+    protected void btnlogout2_Click(object sender, ImageClickEventArgs e)
+    {
+
+    }
+</script>
+
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> </title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="Scripts/knockout-3.4.2.js"></script>
+
+
+    <script src="Scripts/jquery1.9.1.min.js"></script>
+
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap2.min.css" rel="stylesheet" />
+    <script src="Scripts/SiteScripts/MenuSetting.js"></script>
+    <link href="Content/active-user.css" rel="stylesheet" />
+    <link href="Content/Birthday_toggle.css" rel="stylesheet" />
+    <style>
+       
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+        </asp:ScriptManager>
+        <div style="background-color: #7386D5">
+
+
+            <nav>
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+
+
+                        <table style="width: 100%">
+                            <tr>
+                                <td width="15%">
+                                    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                        <i class="glyphicon glyphicon-align-left"></i>
+                                        <span>Navigation</span>
+                                    </button>
+                                </td>
+                                <td width="35%">
+                                    <h1 style="color: whitesmoke; font-weight: 150; font-family: 'Century Gothic'">Birthday Notification App</h1>
+                                </td>
+                                <td width="35%"></td>
+                                <td align="right" width="15%">
+                                    <div class="chip">
+
+                                        <img src="Images/img_avatar.png" alt="Person" width="96" height="96">
+                                        Hello,
+                                <asp:Label ID="lblUser" runat="server" Text="Label"></asp:Label>
+                                        <%--<asp:ImageButton ID="btnlogout2" UseSubmitBehavior="false" runat="server" ImageUrl="~/Images/logout.png" Width="20px" Height="20px" ImageAlign="Middle" CausesValidation="false" OnClick="btnlogout_Click" />--%>
+                                        <%--<input type="submit" formnovalidate  class="glyphicon glyphicon-log-out" style="" onserverclick="btnlogout_Click" id="btnUplaodExcel" value="[Logout]" runat="server" />--%>
+                                        <button type="submit" formnovalidate onserverclick="btnlogout_Click" runat="server" class="glyphicon glyphicon-log-out" style="border: none" title="log out">
+                                            <%--<span>
+                                                <img src="Images/logout.png" style="width: 20px; height: 20px" /></span>--%>
+                                        </button>
+                                    </div>
+
+
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+
+                        <%--<ul class="nav navbar-nav navbar-right">
+                          
+                            <li><a runat="server" href="#" title="Manage your account">Hello,
+                                <asp:Label ID="lblUser" runat="server" Text="Label"></asp:Label>
+                                !</a></li>
+                            <li><span class="glyphicon glyphicon-log-out"></span>
+                            </li>
+                        </ul>--%>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+
+
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Birthday App</h3>
+                    <strong>BA</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="Default.aspx">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Home
+                        </a>
+
+                    </li>
+                    <li class="HRprofile">
+                        <a href="ManageUser.aspx">
+                            <i class="glyphicon  glyphicon-user"></i>
+                            Manage User
+                        </a>
+
+                    </li>
+                    <li class="HRprofile">
+                        <a href="ManageDistribution.aspx">
+                            <i class="glyphicon glyphicon-bell"></i>
+                            Manage Recipients
+                        </a>
+                    </li>
+                    <li class="GlobalHRprofile">
+                        <a href="ManageHRUser.aspx">
+                            <i class="glyphicon glyphicon-book"></i>
+                            Manage HR User
+                        </a>
+
+                    </li>
+
+                    <li class="hidden">
+                        <a href="Contact.aspx">
+                            <i class="glyphicon glyphicon-send"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+
+
+            </nav>
+            <div class="navbar-header">
+
+                <%--<a class="navbar-brand" runat="server" href="~/ManageUser.aspx" style="color: white; font-family: 'Century Gothic'; font-weight: bolder; font-size: x-large">Birthday Notification App</a>--%>
+            </div>
+            <!-- Page Content Holder -->
+            <div class="container body-content" style="font-family: 'Century Gothic'">
+                <div class="jumbotron">
+                    <h2 style="font-family: 'Century Gothic'">Welcome to Birthday Notification App,</h2>
+
+                </div>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+                <footer>
+                    <div class="copy-right">
+                        <p><a href="http://www.faurecia.com/en">© 2017 Faurecia. All Rights Reserved.</a></p>
+                    </div>
+
+                </footer>
+            </div>
+        </div>
+
+
+    </form>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
